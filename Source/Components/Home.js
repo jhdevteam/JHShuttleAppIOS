@@ -228,7 +228,7 @@ componentDidUpdate(prevProps, prevState) {
             lat={"42.3601"}
             lng={"71.0589"}
             extend={"hourly"}
-            units={["apparentTemperature","windSpeed", "dewPoint"]}
+            units={["apparentTemperature","windSpeed"]}
             location={"Boston, USA"}
             />
         </View>   
