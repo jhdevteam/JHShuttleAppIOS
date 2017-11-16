@@ -10,7 +10,7 @@ import { Vibration, AppRegistry,StyleSheet,Text,TouchableOpacity,AsyncStorage, V
 import {Fonts} from 'react-native-vector-icons';
 import { Tabs, Tab, Icon , SocialIcon, Header, Avatar} from 'react-native-elements';
 import ExpandableList from 'react-native-expandable-section-flatlist';
-import { WeatherWidget } from 'react-native-weather';
+import { WeatherWidget } from './react-native-weather';
 import MapView from 'react-native-maps';
 import ModalDropdown from 'react-native-modal-dropdown';
 import renderIf from './renderIf';
@@ -188,7 +188,7 @@ componentDidUpdate(prevProps, prevState) {
                 statusBarProps={{ barStyle: 'light-content' }}
                 leftComponent={<JHLogoComponent />}
                 rightComponent={<HeaderCustomComponent />}
-                outerContainerStyles={{ backgroundColor: '#566AB5', height: 78}}
+                outerContainerStyles={{ backgroundColor: '#98CBEF', height: 78}}
             />
           </View>
           <View>
@@ -283,12 +283,12 @@ componentDidUpdate(prevProps, prevState) {
       return (
         <View>
           <View style={{flexDirection: 'row'}}>
-              <View>
+              <View style={{paddingRight: 10}}>
               <Avatar
                   small
                   rounded
-                  source={require("../Assets/Images/clock_icon_002.png")}
-                  avatarStyle={{backgroundColor: '#566AB5'}}
+                  source={require("../Assets/Images/clock.png")}
+                  avatarStyle={{backgroundColor: '#98CBFE'}}
                   onPress={() => this.setModalVisible(true, 'Time Table')}
                   activeOpacity={0.7}
               />
@@ -297,8 +297,8 @@ componentDidUpdate(prevProps, prevState) {
               <Avatar
                   small
                   rounded
-                  source={require("../Assets/Images/Info_icon_002.png")}
-                  avatarStyle={{ backgroundColor: '#566AB5'}}
+                  source={require("../Assets/Images/info.png")}
+                  avatarStyle={{ backgroundColor: '#98CBFE'}}
                   onPress={() => this.setModalVisible(true, 'Information')} 
                   activeOpacity={0.7}
               />

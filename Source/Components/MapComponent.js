@@ -43,7 +43,7 @@ export const MapComponent=({region,pickDropDeatils,getDropPicLocation,pickDropDa
          <MapView style={styles.map}
           provider = {MapView.POOVIDER_GOOGLE}
           initialRegion={region}
-          location = 'Boston'
+          location = 'Boston, USA'
            
           onMapReady = {console.log('Map Loaded')}
         >
@@ -61,7 +61,7 @@ export const MapComponent=({region,pickDropDeatils,getDropPicLocation,pickDropDa
             />	
           }
         </MapView>            
-        <View style={{borderWidth: 0.5, borderColor: '#566AB5', position:'absolute', top:50, flex: 1, borderRadius:7}}>
+        <View style={{borderWidth: 0.5, borderColor: '#98CBFE', position:'absolute', top:50, flex: 1, borderRadius:7}}>
             <PicDrop picDropDetails={pickDropDeatils} 
             getDropPicLocation={getDropPicLocation} 
             avtarSource = {avtarSource}

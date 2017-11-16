@@ -207,7 +207,7 @@ const styles = {
         marginLeft:15,
         marginRight:15,
         borderWidth:1.5, 
-        borderColor:'#566AB5',
+        borderColor:'#98CBFE',
         backgroundColor:"#ffffff",
         height:40,
         opacity:0.9,
@@ -226,7 +226,7 @@ const styles = {
         backgroundColor:"#fff",
         opacity:0.9,
         borderWidth:1.5, 
-        borderColor:'#566AB5',
+        borderColor:'#98CBFE',
         borderRadius:7
     },
     primaryText:{

@@ -1,14 +1,5 @@
 import React,{Component} from "react";
-
-import {
-  StyleSheet,
-  Text,
-  Dimensions
-  ,Picker
-  ,View
-  
-} from "react-native";
-//import {View,InputGroup,Input,ListItem} from "native-base";
+import { StyleSheet, Text, Dimensions, Picker, View } from "react-native";
 import ModalDropdown from 'react-native-modal-dropdown';
 import { Tabs, Tab, Icon , SocialIcon, Header, Avatar} from 'react-native-elements';
 import renderIfElse from './renderIfElse';
@@ -46,7 +37,6 @@ if(RouteResult)
   function togglePickDrop(val){  
         if(pickDropData.pickUp && pickDropData.dropOff)
         {
-          
           let  dropOf = pickDropData.dropOff;
           var pickIdx=getIndex(pickDropData.dropOff)
           _dropdown_Pickup_select(pickIdx);
@@ -151,13 +141,6 @@ if(RouteResult)
             </View>
                      <View style={{flexDirection:'row',}}>
                         <View>
-
-                            {/* <ModalDropdown 
-                              textStyle={styles.ModalDropDownText}
-                              dropdownTextStyle={styles.ModalDropDownTextOption}
-                              defaultValue="Select location.."
-                              options={['option 1', 'option 2']} 
-                            /> */}
                             <ModalDropdown ref={eld => this._dropdown_Drop = eld}
                             textStyle={styles.ModalDropDownText} 
                             dropdownTextStyle={styles.ModalDropDownTextOption}  
@@ -172,16 +155,16 @@ if(RouteResult)
                              <Icon
                                 name='location'
                                 type='evilicon'
-                                color='#00f'
-                                underlayColor='#00f'
+                                color='blue'
+                                underlayColor='blue'
                             /> 
                             }
                             {(avtarSource == '_reverse')&&
                            <Icon
                                   name='location'
                                   type='evilicon'
-                                  color='#f00'
-                                  underlayColor='#f00'
+                                  color='green'
+                                  underlayColor='green'
                           />  
                            }
                         </View>

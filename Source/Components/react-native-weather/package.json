@@ -1,0 +1,104 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-weather@^0.2.11",
+        "scope": null,
+        "escapedName": "react-native-weather",
+        "name": "react-native-weather",
+        "rawSpec": "^0.2.11",
+        "spec": ">=0.2.11 <0.3.0",
+        "type": "range"
+      },
+      "/Users/user2/Desktop/JHService/JHBusShuttleAppDev"
+    ]
+  ],
+  "_from": "react-native-weather@>=0.2.11 <0.3.0",
+  "_id": "react-native-weather@0.2.11",
+  "_inCache": true,
+  "_location": "/react-native-weather",
+  "_nodeVersion": "8.0.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-weather-0.2.11.tgz_1498768010699_0.3657620269805193"
+  },
+  "_npmUser": {
+    "name": "njwest",
+    "email": "njwest9@gmail.com"
+  },
+  "_npmVersion": "5.0.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-weather@^0.2.11",
+    "scope": null,
+    "escapedName": "react-native-weather",
+    "name": "react-native-weather",
+    "rawSpec": "^0.2.11",
+    "spec": ">=0.2.11 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-weather/-/react-native-weather-0.2.11.tgz",
+  "_shasum": "cb3ead68532f089dfb97b70ed6abe0f19170c618",
+  "_shrinkwrap": null,
+  "_spec": "react-native-weather@^0.2.11",
+  "_where": "/Users/user2/Desktop/JHService/JHBusShuttleAppDev",
+  "author": {
+    "name": "Nick West",
+    "email": "mail@nickwest.io"
+  },
+  "bugs": {
+    "url": "https://github.com/njwest/react-native-weather/issues"
+  },
+  "dependencies": {},
+  "description": "A React Native weather component, easily configurable via props.",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^6.1.2",
+    "babel-jest": "^16.0.0",
+    "babel-preset-react-native": "^1.9.0",
+    "flow-bin": "0.40.0",
+    "jest": "17.0.0",
+    "react": "^16.0.0-alpha.3",
+    "react-native": "^0.43.0",
+    "react-test-renderer": "^15.3.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-YWkCQVx8M1fW2pBPh/RtNAdBCGkdtL2+uDKnjJvmBCxvjhQl9F7zkQkzxbGUFe6R+rI6bqn4vQir4D+q74rDqQ==",
+    "shasum": "cb3ead68532f089dfb97b70ed6abe0f19170c618",
+    "tarball": "https://registry.npmjs.org/react-native-weather/-/react-native-weather-0.2.11.tgz"
+  },
+  "gitHead": "e9acebdde27820169c19f7019914da435e304827",
+  "homepage": "https://github.com/njwest/react-native-weather#readme",
+  "keywords": [
+    "react",
+    "react native",
+    "weather",
+    "weather api",
+    "darksky.net",
+    "app widget",
+    "native app"
+  ],
+  "license": "CC-BY-3.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "njwest",
+      "email": "njwest9@gmail.com"
+    }
+  ],
+  "name": "react-native-weather",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njwest/react-native-weather.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.11"
+}
