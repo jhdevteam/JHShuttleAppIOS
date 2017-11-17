@@ -80,18 +80,23 @@ export const ShowRoute=({pickDropData,toggleShowRouteTime,ShowHide,RouteResult,t
            <Icon 
                   name='heart'
                   type='font-awesome'
-                  size={15}
+                  size={20}
                   color='#f50'
                   //style={styles.iconFavourite}
                   onPress={() => SetFavouriteRoute()}
                 />
           </View>
           <View>
-          <TouchableHighlight onPress={()=>ShowRoute()} onLongPress={()=>HideRoute()}>
-          <Text>{              
-                RouteResult.ROUTE_TITLE
-              }    
-          </Text>
+          <TouchableHighlight 
+            activeOpacity={0.5}
+            underlayColor='#fff'
+            onPress={()=>ShowRoute()} 
+            onLongPress={()=>HideRoute()}
+          >
+            <Text>{              
+                  RouteResult.ROUTE_TITLE
+                }    
+            </Text>
         </TouchableHighlight>  
         </View>
                              
@@ -107,8 +112,7 @@ export const ShowRoute=({pickDropData,toggleShowRouteTime,ShowHide,RouteResult,t
           <Icon 
                         name='close'
                         type='evilicon'
-                        size={15}
-                        
+                        size={25}
                         style={styles.iconLeft}
                         onPress={() => HideRoute()}
                       />
@@ -150,46 +154,45 @@ export const ShowRoute=({pickDropData,toggleShowRouteTime,ShowHide,RouteResult,t
     (showHideRt.valRT=="view") &&
       <View style={styles.RtTime}>            
           <View style={styles.searchResultsWrapper} >
-			                <Icon 
-                        name='close'
-                        type='evilicon'
-                        size={20}
-                        style={styles.iconLeft}
-                        onPress={() => HideRouteDetails()}
-                      />
-			<TouchableOpacity>
-        <View
-          style={{ marginVertical: 10, marginHorizontal: 15, height: 30, flexDirection: 'column',
-            justifyContent: 'space-between', alignItems: 'center', borderBottomWidth: 0.5,
-            borderBottomColor: DictStyle.colorSet.lineColor }}
-        >
-        <View
-          style={{ alignItems: 'center', margin: 5, padding: 5,
-           borderColor: DictStyle.colorSet.lineColor }}
-        >
-          <Text  style={{ fontSize: DictStyle.fontSet.bSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
-            { RouteResult.ROUTE_TITLE }
-          </Text>
-        </View>
-        <View
-          style={{ alignItems: 'center', margin: 5, padding: 5,
-             borderColor: DictStyle.colorSet.lineColor }}
-        >
-          <Text style={{ fontSize: DictStyle.fontSet.mSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
-            Pick Up Time: { PickDropTime.Pick }
-          </Text>
-        </View>
-        <View
-          style={{ alignItems: 'center', margin: 5, padding: 5,
-             borderColor: DictStyle.colorSet.lineColor }}
-        >
-          <Text style={{ fontSize: DictStyle.fontSet.mSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
-            Estimated Drop Time: { PickDropTime.Drop }
-          </Text>
-        </View>
-        </View>
-      </TouchableOpacity>
-					
+            <Icon 
+              name='close'
+              type='evilicon'
+              size={25}
+              style={styles.iconLeft}
+              onPress={() => HideRouteDetails()}
+            />
+          <TouchableOpacity>
+            <View
+              style={{ marginVertical: 10, marginHorizontal: 15, height: 30, flexDirection: 'column',
+                justifyContent: 'space-between', alignItems: 'center', borderBottomWidth: 0.5,
+                borderBottomColor: DictStyle.colorSet.lineColor }}
+            >
+            <View
+              style={{ alignItems: 'center', margin: 5, padding: 5,
+              borderColor: DictStyle.colorSet.lineColor }}
+            >
+              <Text style={{ fontSize: DictStyle.fontSet.bSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
+                { RouteResult.ROUTE_TITLE }
+              </Text>
+            </View>
+            <View
+              style={{ alignItems: 'center', margin: 5, padding: 5,
+                borderColor: DictStyle.colorSet.lineColor }}
+            >
+              <Text style={{ fontSize: DictStyle.fontSet.mSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
+                Pick Up Time: { PickDropTime.Pick }
+              </Text>
+            </View>
+            <View
+              style={{ alignItems: 'center', margin: 5, padding: 5,
+                borderColor: DictStyle.colorSet.lineColor }}
+            >
+              <Text style={{ fontSize: DictStyle.fontSet.mSize, color: DictStyle.colorSet.normalFontColor,fontWeight:'bold' }}>
+                Estimated Drop Time: { PickDropTime.Drop }
+              </Text>
+            </View>
+            </View>
+          </TouchableOpacity>
 			</View>
       </View> }
 
@@ -199,11 +202,11 @@ export const ShowRoute=({pickDropData,toggleShowRouteTime,ShowHide,RouteResult,t
 }
 
 
-var width = Dimensions.get("window").width; //full width
+var WINDOW_WIDTH = Dimensions.get("window").width; //full width
 const styles = {
   RtDetails:{
        flexDirection:'row',
-        width:width-25,
+        width:WINDOW_WIDTH-25,
         marginLeft:15,
         marginRight:15,
         borderWidth:1.5, 
@@ -220,7 +223,7 @@ const styles = {
         marginLeft:15,
         marginRight:10,
         position:"absolute",
-        width:width-25,
+        width:WINDOW_WIDTH-25,
         height:250,
         top: -295 ,
         backgroundColor:"#fff",
@@ -229,35 +232,15 @@ const styles = {
         borderColor:'#98CBFE',
         borderRadius:7
     },
-    primaryText:{
-        fontWeight: "bold",
-        color:"#373737"
-    },
-    secondaryText:{
-        fontStyle: "italic",
-        color:"#7D7D7D",
-    },
-    leftContainer:{
-        flexWrap: "wrap",
-        alignItems: "flex-start",
-        borderLeftColor:"#7D7D7D",
-    },
-    leftIcon:{
-        fontSize:20,
-        color:"#7D7D7D",
-    },
     iconLeft: {
-        marginLeft: 10,
-        marginTop:5,
+        marginRight: 10,
+        marginTop:10,
+        alignItems : 'flex-end'
   },
   iconFavourite: {
         marginRight: 25,
         marginTop:2,
-  },
-    distance:{
-        fontSize:12,
-    }
+  }
 };
-
 
 export default ShowRoute;

@@ -106,30 +106,17 @@ export const RtData=({RouteResult})=>
 
     
       return (
-        <View style={this.styles.container}>
-        {/* <NavigationBar
-          title={this.titleConfig}
-          rightButton={this.rightButtonConfig}
-        /> */}
-        {/* <HideableView visible={this.state.visible}> */}
-        
+        <View style={this.styles.container}>  
         <ExpandableList
-          dataSource={RouteResult}
-          headerKey="ROUTE_TITLE"
-          memberKey="ROUTE_SERVICE"
-          renderRow={this._renderRow}
-          renderSectionHeaderX={this._renderSection}
-        />
-       {/*  </HideableView> */}
+            dataSource={RouteResult}
+            headerKey="ROUTE_TITLE"
+            memberKey="ROUTE_SERVICE"
+            renderRow={this._renderRow}
+            renderSectionHeaderX={this._renderSection}
+          />
       </View>
       );
     }
-  
-
-
-
-
-
 
 export default RtData;
 

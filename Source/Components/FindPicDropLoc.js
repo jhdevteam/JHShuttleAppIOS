@@ -66,8 +66,8 @@ if(RouteResult)
   
   return(
      <View style={styles.ModalDroDownContainer}>
-        <View style={{flexDirection:'column'}}>
-          <View style={{position:'absolute', left: 1, zIndex:190, backgroundColor:'#fff'}}>
+        <View style={{flexDirection:'column', width: 44}}>
+          <View style={{backgroundColor:'#fff'}}>
               {(avtarSource == '_click')&&  
               <Avatar
                   width={44}
@@ -90,143 +90,90 @@ if(RouteResult)
               />
             }
           </View>
-           <View style={{flexDirection:'row', borderBottomWidth:1, borderBottomColor:'#111'}}>
-            <View style={{left: 50, position: 'absolute', zIndex:200}}>
-              <Text style={styles.ModalDropDownLabel}>Pickup:</Text>
-            </View>
-           
-            {/* {renderIfElse(this.state.avtarSource == '_reverse',  */}
-                    <View style={{flexDirection:'row',}} >
-                        <View >
-                            {/* <ModalDropdown 
-                              textStyle={styles.ModalDropDownText}
-                              dropdownTextStyle={styles.ModalDropDownTextOption}
-                              defaultValue="Select location.."
-                              options={['option 1', 'option 2']} 
-                            /> */}
-                            <ModalDropdown ref={el => this._dropdown_Pickup = el}  
-                              dropdownTextStyle={styles.ModalDropDownTextOption} 
-                              textStyle={styles.ModalDropDownText} 
-                              options={hh} 
-                              defaultIndex={defaultPicIndex}
-                              defaultValue={defaultPicValue}
-                              onSelect={bindPicDrop.bind(this, "pickUp")}
-                              >
-                            </ModalDropdown>  
-                        </View>
-                        <View style={{left: 300, position: 'absolute'}}>
-                           {(avtarSource == '_click')&&
-                           <Icon
-                                  name='location'
-                                  type='evilicon'
-                                  color='#f00'
-                                  underlayColor='#f00'
-                          />  
-                           }
-                           {(avtarSource == '_reverse') &&
-                             <Icon
-                                name='location'
-                                type='evilicon'
-                                color='#00f'
-                                underlayColor='#00f'
-                            /> 
-                            }
-                        </View>
-                    </View>
-                     </View>
-          
-            <View>
-            <View style={{left: 50, position: 'absolute', zIndex:200}}>
-              <Text style={styles.ModalDropDownLabel}>Drop-Off:</Text>
-            </View>
-                     <View style={{flexDirection:'row',}}>
-                        <View>
-                            <ModalDropdown ref={eld => this._dropdown_Drop = eld}
-                            textStyle={styles.ModalDropDownText} 
-                            dropdownTextStyle={styles.ModalDropDownTextOption}  
-                            options={hh} 
-                            defaultIndex={defaultDropIndex}
-                            defaultValue={defaultDropValue}
-                            onSelect={bindPicDrop.bind(this, "dropOff")}             
-                            />
-                        </View>
-                        <View  style={{left: 300, position: 'absolute'}}>
-                             {(avtarSource == '_click') &&
-                             <Icon
-                                name='location'
-                                type='evilicon'
-                                color='blue'
-                                underlayColor='blue'
-                            /> 
-                            }
-                            {(avtarSource == '_reverse')&&
-                           <Icon
-                                  name='location'
-                                  type='evilicon'
-                                  color='green'
-                                  underlayColor='green'
-                          />  
-                           }
-                        </View>
-                      </View>
-                      </View>
-
-
-                    
-            {/* )} */}
-           
-          {/* <View>
-            <View style={{left: 50, position: 'absolute', zIndex:200}}>
-              <Text style={styles.ModalDropDownLabel}>Drop-Off:</Text>
-            </View>
-          {renderIfElse(this.state.avtarSource == '_click', 
-            <PickupDropDown />,  
-            <DropOffDropDown />
-          )}
-          </View>  */}
-          {/* <View style={styles.PicDrop}> 
-          <View style={styles.firstInput}>
-           <ModalDropdown options={hh}                                             
-               onSelect={bindPicDrop.bind(hh[this], "pickUp")}             
-                >
-          </ModalDropdown>          
-          </View>
-          <View style={styles.secondInput}>
-          <ModalDropdown  options={hh}                               
-               onSelect={bindPicDrop.bind(hh[this], "dropOff")}             
-          >
-      </ModalDropdown>
-          </View>                        
-      </View> */}
         </View>
+        <View style={{flexDirection:'column'}}>
+          <View style={{flexDirection:'row', borderBottomWidth:1, borderBottomColor:'#111'}}>
+              <View style={{flexDirection:'column', width: 70}}>
+                <Text style={styles.ModalDropDownLabel}>Pickup:</Text>
+              </View>
+              <View style={{flexDirection:'column', width: WINDOW_WIDTH - 170}}>
+                  <View>
+                      <ModalDropdown ref={el => this._dropdown_Pickup = el}  
+                        dropdownTextStyle={styles.ModalDropDownTextOption} 
+                        textStyle={styles.ModalDropDownText} 
+                        options={hh} 
+                        defaultIndex={defaultPicIndex}
+                        defaultValue={defaultPicValue}
+                        onSelect={bindPicDrop.bind(this, "pickUp")}
+                        >
+                      </ModalDropdown>  
+                  </View>
+              </View>
+              <View style={{flexDirection:'column', alignItems: 'center'}}>
+                        {(avtarSource == '_click')&&
+                        <Icon
+                              name='location'
+                              type='evilicon'
+                              color='#f00'
+                              underlayColor='#f00'
+                      />  
+                        }
+                        {(avtarSource == '_reverse') &&
+                          <Icon
+                            name='location'
+                            type='evilicon'
+                            color='#00f'
+                            underlayColor='#00f'
+                        /> 
+                        }
+              </View>
+          </View>
+          <View style={{flexDirection:'row', paddingTop: 5}}>
+              <View style={{flexDirection:'column', width: 70}}>
+                <Text style={styles.ModalDropDownLabel}>Drop-Off:</Text>
+              </View>
+              <View style={{flexDirection:'column', width: WINDOW_WIDTH - 170}}>
+                  <View>
+                      <ModalDropdown ref={eld => this._dropdown_Drop = eld}
+                      textStyle={styles.ModalDropDownText} 
+                      dropdownTextStyle={styles.ModalDropDownTextOption}  
+                      options={hh} 
+                      defaultIndex={defaultDropIndex}
+                      defaultValue={defaultDropValue}
+                      onSelect={bindPicDrop.bind(this, "dropOff")}             
+                      />
+                  </View>
+                </View>
+                <View style={{flexDirection:'column', alignItems: 'center'}}>
+                        {(avtarSource == '_click') &&
+                        <Icon
+                          name='location'
+                          type='evilicon'
+                          color='blue'
+                          underlayColor='blue'
+                      /> 
+                      }
+                      {(avtarSource == '_reverse')&&
+                      <Icon
+                            name='location'
+                            type='evilicon'
+                            color='green'
+                            underlayColor='green'
+                    />  
+                      }
+                  </View>
+              </View>
+
+  </View>
         </View>
       );
-        
+  }
 
-
-   /* return (    
-      <View style={styles.PicDrop}> 
-          <View style={styles.firstInput}>
-           <ModalDropdown options={hh}                                             
-               onSelect={bindPicDrop.bind(hh[this], "pickUp")}             
-                >
-              </ModalDropdown>          
-          </View>
-          <View style={styles.secondInput}>
-          <ModalDropdown  options={hh}                               
-               onSelect={bindPicDrop.bind(hh[this], "dropOff")}             
-          >
-      </ModalDropdown>
-          </View>                        
-      </View>
-    ); */
-}
-
-var width=Dimensions.get("window").width - 20;
+const WINDOW_WIDTH=Dimensions.get("window").width - 20;
 const styles = StyleSheet.create({
   PicDrop: {
     top: -200,
-    width: width,
+    width: WINDOW_WIDTH,
     backgroundColor:'#5bc0de', 
     height: 90,
   }, 
@@ -251,31 +198,31 @@ const styles = StyleSheet.create({
       borderRadius:0
   },
   ModalDroDownContainer: {
-    height: 70,
-    width: width,
+    flexDirection:'row',
+    height: 60,
+    width: WINDOW_WIDTH - 8,
     backgroundColor:'#fff',
     justifyContent: 'center', 
-    paddingLeft: 10,
-    borderBottomWidth:1, 
+    paddingLeft: 0,
+    paddingTop: 10,
+    borderBottomWidth:0.5, 
     borderBottomColor:'#eee',
-    opacity: 10,
+    opacity: 0.9,
+    borderRadius:0.5
   },
   ModalDropDownText: {
-    marginBottom:5,
-    marginLeft: 120,
     fontSize:15, 
     fontWeight: 'normal', 
     color: '#333',
   },
   ModalDropDownTextOption: {
-    marginBottom:5,
-    marginLeft: 10,
+    marginBottom:0,
+    marginLeft: 0,
     fontSize:15, 
     fontWeight: 'normal', 
     color: '#666',
   },
   ModalDropDownLabel: {
-    position:'absolute',
     fontSize:12, 
     fontWeight: 'bold', 
     color: '#333',
