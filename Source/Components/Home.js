@@ -434,8 +434,8 @@ componentDidUpdate(prevProps, prevState) {
         {key: "PM Commuter passengers who want to be dropped at Aquarium T Sta. may request the State St driver do so, but the N Station buses cannot stop there."},
         {key: "7:40 PM & 8:10 PM passengers should advise driver of their destination upon boarding the vehicle at 601."},
         {key: " During inclement weather, passengers may wait inside lobbies of 601 Congress or 380 Stuart St, but will need to watch for bus arrival outside & board before scheduled departure time. "},
-        {key: "The 5:05 Shuttle from 601 Congress to the Back Bay will drop off at the corner of Berleley and Stuart Streets. Outside of Grill 23 "}, 
-        {key: "For Wheelchair accessible transportation between Back Bay & 601 Congress, please contact Stephanie Nickerson at 617-663-4016 (x734016)"}
+        {key: "The 5:05 Shuttle from 601 Congress to the Back Bay will drop off at the corner of Berleley and Stuart Streets. Outside of Grill 23."}, 
+        {key: "For Wheelchair accessible transportation between Back Bay & 601 Congress, please contact Stephanie Nickerson at 617-663-4016(x734016)."}
     ]
       return (
         <View style={styles.ShuttleDetailWrapper}>         
